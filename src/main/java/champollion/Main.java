@@ -13,12 +13,13 @@ public class Main {
         bastide.ajouteEnseignement(web,  8, 20, 30);
         lamine.ajouteEnseignement(bd,   10, 20, 15);
         lamine.ajouteEnseignement(web,  15, 15, 25);
-
-        System.out.printf("Mr. %s a un total de %.2f heures prévues\n", bastide.getNom(), bastide.heuresPrevues());
-        System.out.printf("Mr. %s a un total de %.2f heures prévues\n",  lamine.getNom(),  lamine.heuresPrevues());
+        //pour l'instant je ne sais pas comment passer d'un int à un float
+        //A changer si temps 
+        System.out.printf("Mr. %s a un total de %.2f heures prévues\n", bastide.getNom(), (float)bastide.heuresPrevues());
+        System.out.printf("Mr. %s a un total de %.2f heures prévues\n",  lamine.getNom(),  (float)lamine.heuresPrevues());
         System.out.printf("Mr. %s a un total de %.2f heures prévues dans l'UE %s\n", 
                 bastide.getNom(), 
-                bastide.heuresPrevuesPourUE(uml),
+                (float)bastide.heuresPrevuesPourUE(uml),
                 uml.getIntitule()
         );
         
